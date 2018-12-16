@@ -1,6 +1,8 @@
 package go_offer.重建二叉树;
 
 
+import go_offer.树的子结构.TreeNode;
+
 /**
 *@Description: 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
  * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -19,7 +21,7 @@ public class Solution {
         return reConstructBinaryTree(pre,0,pre.length - 1,in,0,in.length - 1 );
     }
 
-    private TreeNode reConstructBinaryTree(int[] pre,int preStart,int preEnd,int[] in,int inStart,int inEnd){
+    private TreeNode reConstructBinaryTree(int[] pre, int preStart, int preEnd, int[] in, int inStart, int inEnd){
 
         //递归边界
         if (preStart > preEnd || inStart > inEnd){
@@ -39,11 +41,3 @@ public class Solution {
     }
 }
 
-class TreeNode{
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x){
-        x = val;
-    }
-}
