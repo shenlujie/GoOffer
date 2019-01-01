@@ -16,8 +16,8 @@ public class Solution {
      * 动态规划：
      * 状态转移方程 : 以i结尾的数组arr, f(i) = max(f(i - 1) + arr[i] , arr[i])
      * 最终结果res, res = max(f(i) , res)
-     * @param array
-     * @return
+     * @param array 一个数组
+     * @return 连续子数组的最大和
      */
     public int FindGreatestSumOfSubArray(int[] array) {
         int result = array[0];
