@@ -11,27 +11,11 @@ import go_offer.树的子结构.TreeNode;
  */
 public class Solution {
     public int TreeDepth(TreeNode root) {
-        //特殊情况
+        //递归边界
         if (root == null){
             return 0;
         }
 
-        return treeDepth(root);
-    }
-
-    private int treeDepth(TreeNode root){
-        //左右子树都为空
-        if (root.left == null && root.right == null){
-            return 1;
-        }else if (root.left == null && root.right != null){
-            //左子树为空右子树不为空
-            return treeDepth(root.right) + 1;
-        }else if (root.right == null && root.left != null){
-            //左子树不为空右子树为空
-            return treeDepth(root.left) + 1;
-        }else {
-            //左右子树都不为空
-            return Math.max(treeDepth(root.left), treeDepth(root.right)) + 1;
-        }
+        return Math.max(TreeDepth(root.left), TreeDepth(root.right)) + 1;
     }
 }
