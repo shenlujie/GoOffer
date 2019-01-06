@@ -1,7 +1,5 @@
 package go_offer.翻转单词顺序列;
 
-import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @Description: 牛客最近来了一个新员工Fish，每天早晨总是会拿着一本英文杂志，
